@@ -1,0 +1,114 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página criada como parte de conteudo do curso de HTML e CSS da escola DNC">
+        <meta name="keywords" content="Portfolio, HTML, CSS, programação, site, projeto">
+        <meta name="author" content="Escola DNC">
+        <meta name="robots" content="noindex">
+        <title>Portfolio LP</title>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header_index">
+            <div class="container header-container flex">
+                    <div id="logo-box">
+                        <a href="index.html">
+                            <img src="assets/img/logo.svg" alt="Logo generico Portfolio">
+                        </a>
+                    </div>
+                    <nav id="box-menu">
+                        <div id="toggle">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="flex" id="menu-list">
+                            <li><a href="meus-servicos.html">Meus Serviços</a></li>
+                            <li><a href="fale-comigo.html">Fale Comigo</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </nav>
+            </div>
+            <!--Final da estilização da parte superior, menu e logo-->
+            <section id="box-apresentacao">
+                    <div class="container flex">
+                         <div class="texto-apresentacao flex">
+                            <h1 id="apresentacao-nome">
+                                Olá, meu nome 
+                                <span>é Maria</span>    
+                            </h1>
+                            <p>
+                                Sou programadora e gostaria de apresentar meu 
+                                <span>trabalho para você através deste portfólio.</span>
+                            </p>
+                            <a class="flex" href="meus-servicos.html">Meus Serviços</a>
+                        </div>  
+                        
+                        <div id="img-apresentacao" class="flex">
+                            <img src="assets/img/maria.svg" alt="">
+                        </div>
+                    </div>   
+            </section>
+        </header> <!--Estrutura do header, onde contem as div menu e apresentação da prestadora-->
+        
+        <div id="box-clientes">
+            <div class="container">
+                <div>
+                    <strong>Alguns dos meus clientes</strong>
+                </div>
+                <div>
+                    <img src="assets/img/logo-apple.svg" alt="Logo Apple">
+                </div>
+                <div>
+                    <img src="assets/img/logo-slack.svg" alt="Logo Slack">
+                </div>
+                <div>
+                    <img src="assets/img/logo-spotify.svg" alt="Logo Spotify">
+                </div>
+            </div>
+        </div> <!--Esrutura da apresentação dos clientes-->
+
+        <section id="servicos">
+        <div class="container">
+                <div class="conteudo-texto">
+                    <strong>Conheça</strong>
+                    <h2>Meus Serviços</h2>
+                    <p>
+                        Vou ajudar a sua empresa a 
+                        alcançar grandes resultados.
+                    </p>
+                </div>
+                <div class="conteudo-servicos">
+                    <article class="card-servico">
+                        <img src="assets/icon/icon-mala.svg" alt="Icone de uma mala">
+                        <strong>Consultoria</strong>
+                        <p>Te ajudo a organizar sua empresa e melhorar seus resultados.</p>
+                    </article>
+                    
+                    <article class="card-servico">
+                        <img src="assets/icon/logo-send.svg" alt="Icone de envio">
+                        <strong>Email Marketing</strong>
+                        <p>Gerenciar campanhas é difícil. Conte comigo para te ajudar.</p>
+                    </article>
+
+                    <article class="card-servico">
+                        <img src="assets/icon/logo-internet.svg" alt="Icone de serviços">
+                        <strong>Criação de Sites</strong>
+                        <p>Desenvolvo seu site inteiro do zero e te entrego prontinho.</p>
+                    </article>
+
+                </div>
+        </div>
+        </section><!--Estrutura de apresentação dos serviços-->
+
+
+
+        <script src="assets/js/main.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,190 @@
+.container {
+    width: 80%;
+    max-width: 1470px;
+    margin: 0 auto; 
+}
+.flex{
+    display: flex;
+}
+.active {
+    display: flex !important;
+}   
+.header-container{
+    justify-content: space-between;
+    align-items: center;
+    height: 132px; /* Verificar, acho que um padding seria melhor na responsividade */
+}
+#logo-box,
+#box-menu{
+    flex: 1;
+    
+}
+#box-menu ul{
+    justify-content: end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#box-menu ul li{
+    display: inline-block;
+}
+#box-menu ul li a{
+    display: flex;
+    padding: 20px 25px;
+    transition: background .5s, color .5s; /*Transição da cor para o hover do li*/
+    color: #070F18;
+    text-decoration: none;
+}
+#box-menu ul li a:hover{
+    background: #474d55;
+    color: #fff; 
+}
+#toggle{
+    display: none;
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100; /*Prioriza o toggle num contexto geral em relação ao restante dos componentes*/
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    background-color: #070F18;
+    transition: all .3s ease-in-out; /*Fica como base para caso haja alguma feature para animação*/
+}
+ /* Final da estilização da parte superior, está responsiva e pronta para alguma feature que envolva animaçaõ*/
+
+ #box-apresentacao{
+   display: flex;
+   justify-content: center;
+   box-sizing: border-box;
+}
+
+#box-apresentacao > .container{
+    height: 100%; 
+}
+
+.texto-apresentacao, 
+#img-apresentacao{
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
+
+}
+
+.texto-apresentacao{
+    justify-content: center;
+}
+
+.texto-apresentacao h1{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 3.4375rem;
+    line-height: 150%
+    /* letter-spacing: 0%; */
+}
+
+.texto-apresentacao span{
+    display: block;
+   
+}
+
+.texto-apresentacao p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 32px;
+    letter-spacing: 0%;
+    padding: 0px 0px 30px 0px;
+    margin-top: -15px;
+    color: #575455;
+}
+
+.texto-apresentacao a{
+    width: 180px;
+    height: 48px;
+    margin-top: -15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1F7CFF;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: none;
+    color: #fff;    
+
+} 
+
+#img-apresentacao{
+    box-sizing: border-box;
+    padding: 50px 0px 50px 50px;
+    width: 80%;
+    height: 80%;
+
+}
+
+#img-apresentacao img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+
+    .container {
+    width: 80%;
+    margin: 0 auto; 
+}
+
+    #box-menu{
+        display: flex;
+        justify-content: end;
+    }
+    #toggle{
+        display: flex;
+    }
+
+    #box-menu ul.flex{
+       display: none;
+       flex-direction: column;
+       position: absolute;
+       top: 90px;
+       width: 100%;
+       left: 0; /*Define que o menu comece na esquerda*/
+       z-index: 99; /* Fica abaixo do hambúrguer */
+       box-shadow: 0 4px 8px rgba(189, 74, 74, 0.2);
+       background-color: #dadde4;
+       
+    }
+
+    ul.flex > li:last-child{
+        border-bottom: none;
+        
+    }
+
+    ul.flex > li a {
+        display: block; /* Faz o link ocupar toda a largura do item */
+
+        padding: 15px 0;
+        border: 1px solid red;
+    }
+
+    ul.flex li a:hover{
+        background: #828488 !important;
+        color: #fff; 
+    }
+
+    /* FIM estilização do menu responsivo do menu */
+}
+
+/*Final da Media queries */
+
+
