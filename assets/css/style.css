@@ -130,7 +130,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  background: var(--cor-primaria);
+  background: #fff;
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -311,7 +311,6 @@ button:hover {
 
 .projetos img{  
     flex: 1;
-    padding: 50px;
 }
 
 /* === RESPONSIVO === */
@@ -341,7 +340,7 @@ button:hover {
   #box-menu ul.flex li a {
     display: block;
     padding: 15px 0;
-    border: 1px solid red;
+    border-bottom: 1px solid black;
   }
 
   #box-apresentacao .container {
