@@ -326,6 +326,11 @@ button:hover {
     
     }
 
+  .projetos img{  
+    flex: 1;
+    padding: 30px;
+}
+
   #box-menu ul.flex {
     display: none;
     flex-direction: column;
