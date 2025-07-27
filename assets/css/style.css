@@ -311,7 +311,8 @@ button:hover {
 
 .projetos img{  
     flex: 1;
-    padding: 30px 0px;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 /* === RESPONSIVO === */
@@ -325,11 +326,6 @@ button:hover {
        
     
     }
-
-  .projetos img{  
-    flex: 1;
-    padding: 30px;
-}
 
   #box-menu ul.flex {
     display: none;
