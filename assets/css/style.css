@@ -1,186 +1,401 @@
+/* === BASE === */
+:root {
+  --cor-primaria: #1a73e8;
+  --cor-hover: #155cc0;
+  --cor-texto: #070F18;
+  --cor-cinza: #575455;
+  --cor-fundo-input: #F5F6FB;
+  --cor-hover-menu: #474d55;
+  --cor-alerta: #e63946;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--cor-texto);
+}
+
+/* === CONTAINER === */
 .container {
-    width: 80%;
-    max-width: 1470px;
-    margin: 0 auto; 
+  width: 90%;
+  max-width: 1470px;
+  margin: 0 auto;
 }
-.flex{
-    display: flex;
+
+.flex {
+  display: flex;
 }
+
 .active {
-    display: flex !important;
-}   
-.header-container{
-    justify-content: space-between;
-    align-items: center;
-    height: 132px; /* Verificar, acho que um padding seria melhor na responsividade */
+  display: flex !important;
 }
+
+/* === HEADER === */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
 #logo-box,
-#box-menu{
-    flex: 1;
-    
-}
-#box-menu ul{
-    justify-content: end;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-#box-menu ul li{
-    display: inline-block;
-}
-#box-menu ul li a{
-    display: flex;
-    padding: 20px 25px;
-    transition: background .5s, color .5s; /*Transição da cor para o hover do li*/
-    color: #070F18;
-    text-decoration: none;
-}
-#box-menu ul li a:hover{
-    background: #474d55;
-    color: #fff; 
-}
-#toggle{
-    display: none;
-    width: 40px;
-    height: 30px;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 100; /*Prioriza o toggle num contexto geral em relação ao restante dos componentes*/
-}
-.bar{
-    width: 100%;
-    height: 3px;
-    background-color: #070F18;
-    transition: all .3s ease-in-out; /*Fica como base para caso haja alguma feature para animação*/
-}
- /* Final da estilização da parte superior, está responsiva e pronta para alguma feature que envolva animaçaõ*/
-
- #box-apresentacao{
-   display: flex;
-   justify-content: center;
-   box-sizing: border-box;
+#box-menu {
+  flex: 1;
 }
 
-.texto-apresentacao, 
-#img-apresentacao{
-    flex-direction: column;
-    flex: 1;
-    box-sizing: border-box;
-
-}
-.texto-apresentacao{
-    justify-content: center;
+/* === MENU === */
+#box-menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 10px;
 }
 
-.texto-apresentacao h1{
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 3.4375rem;
-    line-height: 150%
+#box-menu li a {
+  display: flex;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: var(--cor-texto);
+  transition: background 0.3s, color 0.3s;
 }
 
-.texto-apresentacao span{
-    display: block;
-   
+#box-menu li a:hover {
+  background: var(--cor-hover-menu);
+  color: #fff;
+}
+
+/* === TOGGLE (MENU HAMBÚRGUER) === */
+#toggle {
+  display: none;
+  width: 40px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: var(--cor-texto);
+  transition: all 0.3s ease-in-out;
+}
+
+/* === APRESENTAÇÃO === */
+#box-apresentacao {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.texto-apresentacao,
+#img-apresentacao {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-apresentacao {
+  justify-content: center;
+}
+
+.texto-apresentacao h1 {
+  font-size: clamp(2rem, 5vw, 3.4375rem);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.texto-apresentacao span {
+  display: block;
 }
 
 .texto-apresentacao p {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 32px;
-    padding: 0px 0px 30px 0px;
-    margin-top: -15px;
-    color: #575455;
+  font-size: 1rem;
+  line-height: 32px;
+  margin-top: -15px;
+  padding-bottom: 30px;
+  color: var(--cor-cinza);
 }
 
-.texto-apresentacao a{
-    width: 180px;
-    height: 48px;
-    margin-bottom: 15px;
-    align-items: center;
-    justify-content: center;
-    background-color: #1F7CFF;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 100%;
-    text-decoration: none;
-    color: #fff;    
-    transition: background-color 0.3s ease
+.texto-apresentacao a {
+  display: flex;
+  width: 180px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
+
 .texto-apresentacao a:hover {
-    background-color: #1a6ac9; /* Um tom um pouco mais escuro para o hover */
+  background: var(--cor-hover);
 }
 
-#img-apresentacao{
-    box-sizing: border-box;
-    padding: 50px 0px 50px 50px;
-    width: 80%;
-    height: 80%;
+#img-apresentacao {
+  padding: 50px 0 50px 50px;
+}
+
+#img-apresentacao img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === SERVIÇOS === */
+#servicos > .container {
+  text-align: center;
+}
+
+.conteudo-texto {
+  padding: 80px 0 50px;
+}
+
+.conteudo-texto strong {
+  color: var(--cor-alerta);
+  font-weight: 700;
+}
+
+.conteudo-texto h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: -5px;
+}
+
+.conteudo-texto p {
+  color: var(--cor-cinza);
+  line-height: 32px;
+  margin-top: -15px;
+  font-weight: 400;
+}
+
+/* === CARDS DE SERVIÇOS === */
+.conteudo-servicos {
+  display: flex;
+  gap: 30px;
+}
+
+.card-servico {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-servico img {
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+.card-servico p {
+  color: var(--cor-cinza);
+  line-height: 32px;
+  font-weight: 400;
+}
+
+/* === CONTATO === */
+.contato > .container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* === CLIENTES === */
+#box-clientes > .container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 143px;
+  color: var(--cor-texto);
+}
+
+#box-clientes > .container > div:first-child {
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* === FORMULÁRIO === */
+#box-contato .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.form-section {
+  flex: 1;
+ 
+}
+
+.form-section p {
+  color: var(--cor-alerta);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.form-section h1 {
+  font-size: 2.5rem;
+  margin: 0 0 20px 0;
+}
+
+.form-section span {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+input[type="email"] {
+  width: 60%;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background: var(--cor-fundo-input);
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 15px 70px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--cor-hover);
+}
+
+.textos-footer strong{
+    color: var(--cor-alerta );
+    font-weight: 700;
 
 }
 
-#img-apresentacao img{
-   width: 100%;
-    height: auto; /* Garante que a proporção da imagem seja mantida */
-    display: block; 
+.textos-footer h2{
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+.projetos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap ;
+   
 }
 
+.projetos img{  
+    flex: 1;
+    padding: 50px;
+}
 
-
-
-
-
-
+/* === RESPONSIVO === */
 @media screen and (max-width: 960px) {
-
-    .container {
-    width: 80%;
-    margin: 0 auto; 
-}
-
+  #toggle { 
+    display: flex;  
+ 
+    } 
     #box-menu{
-        display: flex;
-        justify-content: end;
-    }
-    #toggle{
-        display: flex;
-    }
-
-    #box-menu ul.flex{
-       display: none;
-       flex-direction: column;
-       position: absolute;
-       top: 90px;
-       width: 100%;
-       left: 0; /*Define que o menu comece na esquerda*/
-       z-index: 99; /* Fica abaixo do hambúrguer */
-       box-shadow: 0 4px 8px rgba(189, 74, 74, 0.2);
-       background-color: #dadde4;
+        justify-items: flex-end;
        
+    
     }
 
-    ul.flex > li:last-child{
-        border-bottom: none;
-        
-    }
+  #box-menu ul.flex {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: #dadde4;
+    box-shadow: 0 4px 8px rgba(189, 74, 74, 0.2);
+    z-index: 99;
+  }
 
-    ul.flex > li a {
-        display: block; /* Faz o link ocupar toda a largura do item */
+  #box-menu ul.flex li a {
+    display: block;
+    padding: 15px 0;
+    border: 1px solid red;
+  }
 
-        padding: 15px 0;
-        border: 1px solid red;
-    }
+  #box-apresentacao .container {
+    flex-direction: column-reverse;
+  }
 
-    ul.flex li a:hover{
-        background: #828488 !important;
-        color: #fff; 
-    }
+  #img-apresentacao {
+    padding: 0;
+  }
 
-    /* FIM estilização do menu responsivo do menu */
+  .texto-apresentacao h1,
+  .texto-apresentacao p {
+    text-align: center;
+  }
+
+  .texto-apresentacao a {
+    margin: 0 auto;
+  }
+
+  #box-clientes > .container {
+    flex-direction: column;
+  }
+
+  #box-clientes > .container > div {
+    padding: 30px;
+  }
+
+  #box-clientes > .container > div:first-child {
+    justify-content: center;
+    text-align: center;
+  }
+ .contato > .container {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+ }
+  input[type="email"] {
+    width: 100%;
+  }
+
+  .textos-footer strong,
+  .textos-footer h2{
+    text-align: center;
+    justify-content: center;
+}
 }
 
-/*Final da Media queries */
 
+
+@media screen and (max-width: 630px) {
+    .conteudo-servicos {
+        display: flex;
+        flex-direction: column;
+    }
+  
+}
 

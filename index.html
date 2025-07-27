@@ -58,9 +58,9 @@
         </header> <!--Estrutura do header, onde contem as div menu e apresentação da prestadora-->
         
         <div id="box-clientes">
-            <div class="container">
+            <div class="container flex">
                 <div>
-                    <strong>Alguns dos meus clientes</strong>
+                    <strong>Alguns dos <span class="span">meus clientes</span></strong>
                 </div>
                 <div>
                     <img src="assets/img/logo-apple.svg" alt="Logo Apple">
@@ -81,33 +81,70 @@
                     <h2>Meus Serviços</h2>
                     <p>
                         Vou ajudar a sua empresa a 
-                        alcançar grandes resultados.
+                        <span class="span">alcançar grandes resultados.</span>
                     </p>
                 </div>
-                <div class="conteudo-servicos">
-                    <article class="card-servico">
+                <div class="conteudo-servicos flex">
+                    <article class="card-servico flex">
                         <img src="assets/icon/icon-mala.svg" alt="Icone de uma mala">
                         <strong>Consultoria</strong>
-                        <p>Te ajudo a organizar sua empresa e melhorar seus resultados.</p>
+                        <p>Te ajudo a organizar sua empresa <span class="span">e melhorar seus resultados.</span></p>
                     </article>
                     
-                    <article class="card-servico">
+                    <article class="card-servico flex">
                         <img src="assets/icon/logo-send.svg" alt="Icone de envio">
                         <strong>Email Marketing</strong>
-                        <p>Gerenciar campanhas é difícil. Conte comigo para te ajudar.</p>
+                        <p>Gerenciar campanhas é difícil. <span class="span">Conte comigo para te ajudar.</span> </p>
                     </article>
 
-                    <article class="card-servico">
+                    <article class="card-servico flex">
                         <img src="assets/icon/logo-internet.svg" alt="Icone de serviços">
                         <strong>Criação de Sites</strong>
-                        <p>Desenvolvo seu site inteiro do zero e te entrego prontinho.</p>
+                        <p>Desenvolvo seu site inteiro <span class="span">do zero e te entrego prontinho.</span></p>
                     </article>
 
                 </div>
         </div>
         </section><!--Estrutura de apresentação dos serviços-->
 
+        <section id="box-contato" class="contato">
+            <div class="container flex">
+               
+                <div class="form-section">
+                    <p>Economize seu tempo</p>
+                    <h1>Ganhe mais dinheiro</h1>
+                    <span>Digite aqui seu endereço de e-mail. Eu entrarei em <span class="span">contato para fornecer um diagnóstico gratuito.</span></span>
+                    <form action="#" method="post">
+                            <input type="email" placeholder="E-mail" required> <br>
+                            <button type="submit">Enviar</button>
+                    </form>
+                </div>
 
+                 <div class="image">
+                    <img src="assets/img/contato-img.svg" alt="Duas mulheres discutindo documentos">
+                </div>
+            </div>   
+            </section>
+
+        <footer>
+            <div class="container">
+                <div class="textos-footer">
+                    <strong class="flex">Conheça meu trabalho</strong>
+                    <h2>Portfolio</h2>
+                </div>
+
+                <div class="projetos">
+                    <img src="assets/img/projeto01.svg" alt="">
+                    <img src="assets/img/projeto02.svg" alt="">
+                    <img src="assets/img/projeto3.svg" alt="">
+                </div>
+
+            </div>
+
+
+
+
+        </footer>
 
         <script src="assets/js/main.js"></script>
     </body>
